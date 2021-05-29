@@ -1,0 +1,66 @@
+table {
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin: auto;
+    
+}
+td {
+    text-align: center;
+}
+div.inicial {
+    background-color: aliceblue;
+    width: 500px;
+    height: 185px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+    padding-left: 5px;
+}
+
+#identificacao {
+    width: 140px;
+}
+#voo {
+    width: 140px;
+}
+
+div.final {
+    background-color: aliceblue;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+    padding-left: 15px;
+    padding-top: 1px;
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/1046493/pexels-photo-1046493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    margin-left: 30px;
+    margin-right: 5px;
+}
+
+.reservar {
+    margin-left: 30px;
+}
+
+
+
+#identificacao
+#voo
+#paragrafo {
+    background-color: aliceblue;
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+    padding: 15px;
+}

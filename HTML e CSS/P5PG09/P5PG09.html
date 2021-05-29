@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Finalizar Compra</title>
+</head>
+<body bgcolor="purple">
+	<section>
+		<div>
+			<form method="get">
+				<fieldset style="width: 400px;">
+					<legend>
+						Pagamento
+					</legend>
+					<fieldset>
+						<legend>
+							Cartão
+						</legend>
+						<div>
+						<fieldset>
+							<legend>
+								Bandeira:
+							</legend>
+							<input type="radio" name="Bandeira" value="Visa" id="Visa">
+							<label for="Visa">Visa</label>
+							<input type="radio" name="Bandeira" value="Master" id="Master">
+							<label for="Master">Master</label>
+							<input type="radio" name="Bandeira" value="Elo" id="Elo">
+							<label for="Elo">Elo</label>
+						</fieldset>
+						</div>
+						<br>
+						<div>
+						<label>Por onde deseja receber a nota fiscal?</label><br>
+						<input type="checkbox" name="email">E-mail
+						<input type="checkbox" name="email">Celular<br>
+						<label>
+							Validade:
+						</label>
+						<input maxlength="2" class="numDD" type="number" id="data" name="mes" min="01" max="12">
+							/
+							<input maxlength="4" class="numQD" type="number" id="data" name="ano" min="2021" max="2050"> 
+						</div>
+						<div>
+							<br>
+						<label>
+							Número: 
+						</label>
+						<input type="text" name="numCartao"><br><br>
+						<label>
+							CVV:
+						</label>
+						<input maxlength="3" type="password" name="CVV"><br><br>
+						<label>Selecione:</label>
+						<select>
+							<option>---</option>
+							<option>Crédito</option>
+							<option>Débito</option>
+						</select>
+						</div>
+					</fieldset>
+					<br>
+					<textarea rows="10" cols="20">Insira suas observações sobre o pedido aqui!</textarea>
+					<br><bR>
+					<label>
+						Valor R$ <input type="text" name="valor">
+					</label>
+				</fieldset>
+				<br><br>
+				<div class="botoes"><button type="submit">Enviar</button>
+			<input type="reset" name="Limpar" value="Limpar">
+			<div>
+			</form>
+		</div>
+	</section>
+</body>
+</html>

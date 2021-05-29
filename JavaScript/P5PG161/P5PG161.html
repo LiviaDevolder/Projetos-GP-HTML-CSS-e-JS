@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>P5PG161</title>
+    <link rel="stylesheet" href="P5PG161.css" />
+  </head>
+  <body>
+    <div class="inicial">
+      <h1 align="center">Companhia Aérea</h1>
+      <form>
+        <label>Insira o número da carteira de identidade:</label>
+        <input type="text" name="identidade" id="identificacao" /><br /><br />
+        <label>Insira o número do vôo:</label>
+        <input type="text" name="identidade" id="voo" /><br /><br />
+        <input
+          class="reservar"
+          type="button"
+          name="Reservar"
+          value="Reservar"
+          onclick="reservar()"
+        />
+        <input type="button" name="Limpar" value="Limpar" onclick="limpar()" />
+      </form>
+      <br/>
+      <div id="tabela"></div><br>
+      <div class="final" id="reservas">
+        <h3>Reservas</h3>
+      </div>
+    </div>
+    <script src="P5PG161.js"></script>
+  </body>
+</html>
