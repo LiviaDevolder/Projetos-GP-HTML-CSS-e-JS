@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <script>
+            function calcularCedulas(salarioBruto){
+                var cedulaDe200 = 0;
+                var cedulaDe100 = 0;
+                var cedulaDe50 = 0;
+                var cedulaDe20 = 0;
+                var cedulaDe10 = 0;
+                var cedulaDe05 = 0;
+                var cedulaDe02 = 0;
+                var moedaDe1Real = 0;
+                var restoDoDinheiro = salarioBruto;
+
+                if(restoDoDinheiro >= 200){
+                    cedulaDe200 = Math.floor(restoDoDinheiro / 200);
+                    restoDoDinheiro = restoDoDinheiro % 200;
+                }
+                if(restoDoDinheiro >= 100){
+                    cedulaDe100 = Math.floor(restoDoDinheiro / 100);
+                    restoDoDinheiro = restoDoDinheiro % 100;
+                } 
+                if(restoDoDinheiro >= 50){
+                    cedulaDe50 = Math.floor(restoDoDinheiro / 50);
+                    restoDoDinheiro = restoDoDinheiro % 50;
+                }
+                if(restoDoDinheiro >= 20){
+                    cedulaDe20 = Math.floor(restoDoDinheiro / 20);
+                    restoDoDinheiro = restoDoDinheiro % 20;
+                }
+                if(restoDoDinheiro >= 10){
+                    cedulaDe10 = Math.floor(restoDoDinheiro / 10);
+                    restoDoDinheiro = restoDoDinheiro % 10;
+                }
+                if(restoDoDinheiro >= 5){
+                    cedulaDe05 = Math.floor(restoDoDinheiro / 5);
+                    restoDoDinheiro = restoDoDinheiro % 5;
+                }
+                if(restoDoDinheiro >= 2){
+                    cedulaDe02 = Math.floor(restoDoDinheiro / 2);
+                    restoDoDinheiro = restoDoDinheiro % 2;
+                }
+                if(restoDoDinheiro >= 1){
+                    moedaDe1Real = Math.floor(restoDoDinheiro / 1);
+                    restoDoDinheiro = restoDoDinheiro % 1;
+                }
+
+                document.getElementById("200reais").innerHTML= cedulaDe200;
+                document.getElementById("100reais").innerHTML= cedulaDe100;
+                document.getElementById("50reais").innerHTML= cedulaDe50;
+                document.getElementById("20reais").innerHTML= cedulaDe20;
+                document.getElementById("10reais").innerHTML= cedulaDe10;
+                document.getElementById("5reais").innerHTML= cedulaDe05;
+                document.getElementById("2reais").innerHTML= cedulaDe02;
+                document.getElementById("1real").innerHTML= moedaDe1Real;
+            }
+
+            function calcularPagamento(){
+                var id = document.getElementById("campoId").value;
+                var qtdHoras = parseInt(document.getElementById("horasTrabalhadas").value);
+                var salarioPorHora = parseInt(document.getElementById("salarioPorHora").value);
+                var salarioBruto = qtdHoras * salarioPorHora;
+                document.getElementById("idFuncionario").innerHTML = "Notas que o funcionário com RE: " + id + ", irá receber: ";
+                calcularCedulas(salarioBruto);
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1 align="center">Numerário</h1>
+        <br>
+        <form>
+            <table align="center" border="3" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td>
+                        <h3>id: </h3>
+                    </td>
+                    <td>
+                        <input type="text" id="campoId">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Horas Trabalhadas: </h3>
+                    </td>
+                    <td>
+                        <input type="text" id="horasTrabalhadas">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Salário Hora: </h3>
+                    </td>
+                    <td>
+                        <input type="text" id="salarioPorHora">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button type="button" onclick="calcularPagamento()">Calcular</button>
+                    </td>
+                    <td align="center">
+                        <button type="reset">Limpar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <h1 id="idFuncionario" align="center">Quantidades</h1>
+        <form>
+            <table align="center" border="3" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td align="center">
+                        <h2>Cédulas</h2>
+                    </td>
+                    <td align="center">
+                        <h2>Quantidade</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="cédula-200-reais_reverso.jpg" alt="200 reais" width="200px" height="100px">
+                    </td>
+                    <td id="200reais" align="center">
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="cédula-100-reais_reverso.jpg" alt="100 reais" width="200px" height="100px">
+                    </td>
+                    <td id="100reais" align="center">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="cédula-50-reais_reverso.jpg" alt="50 reais" width="200px" height="100px">
+                    </td>
+                    <td id="50reais" align="center">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="cédula-20-reais_reverso.jpg" alt="20 reais" width="200px" height="100px">
+                    </td>
+                    <td id="20reais" align="center">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="cédula-10-reais_reverso.jpg" alt="10 reais" width="200px" height="100px">
+                    </td>
+                    <td id="10reais" align="center">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="cédula-5-reais_reverso-2.jpg" alt="5 reais" width="200px" height="100px">
+                    </td>
+                    <td id="5reais" align="center">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="cédula-2-reais_reverso-1.jpg" alt="2 reais" width="200px" height="100px">
+                    </td>
+                    <td id="2reais" align="center">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="moeda-1-real.jpg" alt="1 real" width="200px" height="100px">
+                    </td>
+                    <td id="1real" align="center">
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

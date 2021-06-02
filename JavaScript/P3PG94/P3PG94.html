@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>P3PG94</title>
+  </head>
+
+  <body>
+    <style>
+      .container, h1 {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    </style>
+
+    <h1>Classificação de Nadadores</h1>
+    <div class="container">
+      <form action="">
+      <table border="1">
+
+        <tr>
+          <td>Digite sua idade</td>
+          <td><input type="text" name="" id="idade"></td>
+        </tr>
+        <tr>
+          <td>Sua classificação</td>
+          <td><label id="classificacao"></label></td>
+        </tr>
+
+      </table>
+      <input type="button" value="Ok" onclick="calcular()">
+      <input type="reset" value="Limpar" onclick="limpar()">
+      </form>
+
+      <div class="holder"></div>
+    </div>
+  
+    <script src="script.js"></script>
+    
+  </body>
+</html>

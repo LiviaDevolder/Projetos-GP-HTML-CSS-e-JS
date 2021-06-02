@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>P5PG161 - Companhia Aérea</title>
+  </head>
+
+  <body>
+
+    <h1>Reserva de Voos</h1>
+    <div class="container">
+      <form action="">
+      <table border="1">
+
+        <tr>
+          <td>Digite seu RG</td>
+          <td><input type="text" name="" id="rg"></td>
+        </tr>
+          
+        <tr>
+          <td>Número do Voo</td>
+          <td><input type="text" name="" id="numVoo"></td>
+        </tr>
+
+        <tr>
+          <td>Lugares disponíveis</td>
+          <td><label id="lugares"></label></td>
+        </tr>
+        
+        <tr>
+          <td>Status da Reserva</td>
+          <td><label id="reserva"></label></td>
+        </tr>
+
+      </table>
+      <br>
+      <input type="button" value="Reservar" onclick="reservar()">
+      <input type="reset" value="Limpar" onclick="limpar()">
+      </form>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
